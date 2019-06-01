@@ -1,15 +1,31 @@
-import React from 'react';
+
+import React, { Component } from 'react'
 import './App.css';
+import Main from './components/Main'
+import User from './components/User'
 
-import Subapp from './components/Subapp'
+export default class Subapp extends Component {
+    constructor(props){
+        super(props);
+            this.state = {
+                    name : 'Umer'
+            }
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Redux tests</h1>
-      <Subapp />
-      </div>
-  );
+            this.changeUser = this.changeUser.bind(this)
+    }
+
+    changeUser(newName){
+        this.setState({name: newName})
+    }
+
+
+    render() {
+        return (
+            <div className="App">
+                <h2>This is sub app</h2>
+                <Main changeUser = {this.changeUser} />
+                <User username = {this.state.name}/>
+            </div>
+        )
+    }
 }
-
-export default App;
