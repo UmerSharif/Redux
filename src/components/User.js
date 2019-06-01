@@ -11,7 +11,7 @@ export default class User extends Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-12">
-                        <p></p>
+                        <p> Name: {this.props.username}</p>
                     </div>
                 </div>
             </div>

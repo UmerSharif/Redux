@@ -6,6 +6,15 @@ import User from './User'
 export default class Subapp extends Component {
     constructor(props){
         super(props);
+            this.state = {
+                    name : 'Umer'
+            }
+
+            this.changeUser = this.changeUser.bind(this)
+    }
+
+    changeUser(newName){
+        this.setState({name: newName})
     }
 
 
@@ -13,8 +22,8 @@ export default class Subapp extends Component {
         return (
             <div>
                 <h2>This is sub app</h2>
-                <Main />
-                <User />
+                <Main changeUser = {this.changeUser} />
+                <User username = {this.state.name}/>
             </div>
         )
     }
