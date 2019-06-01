@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react'
-import './App.css';
-import Main from './components/Main'
-import User from './components/User'
+import '../App.css';
+import Main from '../components/Main'
+import User from '../components/User'
 
 export default class Subapp extends Component {
     constructor(props){
