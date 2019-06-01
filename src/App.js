@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
 
+import Subapp from './components/Subapp'
+
 function App() {
   return (
     <div className="App">
-      <p>Redux tests</p>
+      <h1>Redux tests</h1>
+      <Subapp />
       </div>
   );
 }

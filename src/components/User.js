@@ -1,5 +1,3 @@
-import React from 'react';
-
 import React, { Component } from 'react'
 
 export default class User extends Component {
@@ -8,7 +6,7 @@ export default class User extends Component {
             <div>
                 <div className="row">
                     <div className="col-xs-12">
-                        <h1>The User Page</h1>
+                        <h3>The User Page</h3>
                     </div>
                 </div>
                 <div className="row">
