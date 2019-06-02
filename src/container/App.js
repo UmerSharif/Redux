@@ -8,19 +8,12 @@ import {connect} from 'react-redux'
 import {setName} from '../actions/userAction'
 
  class App extends Component {
-    constructor(props){
-        super(props);
-
-            this.changeUser = this.changeUser.bind(this)
-    }
-
-    changeUser(newName){
-       
-    }
+  
     render() {
         return (
             <div>
-                <Main changeUser = {this.changeUser} />
+                {/* hook up the main component to redux */}
+                <Main changeUser = {() => this.props.setName('Anna')} /> 
                 <User username = {this.props.user.name}/>
             </div>
         )

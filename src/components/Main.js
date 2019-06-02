@@ -4,13 +4,13 @@ export default class Main extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name: 'Anna'
+            name: ''
         }
         this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick(){
-        this.props.changeUser(this.state.name)
+       this.props.changeUser(this.state.name)
     }
 
     render() {
